@@ -1,17 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package abs;
 
 import java.util.Date;
 
-/**
- *
- * @author bank
- */
-public abstract class address extends Job {
+public abstract class address{
     private String name;
     private String sname;
     private String gender;
@@ -40,7 +32,7 @@ public abstract class address extends Job {
         this.bankAccount = bankAccount;
     }
 
-    public address(String name, String sname, String gender, Date DateOfBirth, String address, String passport, String employeeId, String ethnicity, int salary, String jobName) {
+    public address(String name, String sname, String gender, Date DateOfBirth, String address, String passport, String employeeId, String ethnicity, int salary) {
         this.name = name;
         this.sname = sname;
         this.gender = gender;
@@ -50,7 +42,6 @@ public abstract class address extends Job {
         this.employeeId = employeeId;
         this.ethnicity = ethnicity;
         this.salary = salary;
-        setJobName(jobName);
     }
     
     
@@ -152,5 +143,17 @@ public abstract class address extends Job {
         this.bankAccount = bankAccount;
     }
     
-    
+    public void print(){
+        System.out.println("Name: "+getName());
+        System.out.println("Surname: "+getSname());
+        System.out.println("Gender: "+getGender());
+        System.out.println("DateOfBirth: "+getDateOfBirth());
+        System.out.println("Address: "+getAddress());
+        System.out.println("Passport"+getPassport());
+        System.out.println("Nationality: "+getNationality());
+        System.out.println("Ethnicity: "+getEthnicity());
+        System.out.println("Salary: "+getSalary());
+        System.out.println("Working Start Date: "+getStartWorkDate());
+        System.out.println("Bank Account: "+getBankAccount());
+    }
 }

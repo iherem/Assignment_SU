@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package abs;
 
 import java.util.Date;
 
-/**
- *
- * @author bank
- */
 public abstract class workAddress extends address{
     private String work_address;
 
@@ -23,8 +14,8 @@ public abstract class workAddress extends address{
         this.work_address = work_address;
     }
     
-    public workAddress(String name, String sname, String gender, Date DateOfBirth, String address, String passport, String employeeId, String ethnicity, int salary, String jobName){
-        super(name, sname, gender, DateOfBirth, address, passport, employeeId, ethnicity, salary, jobName);
+    public workAddress(String name, String sname, String gender, Date DateOfBirth, String address, String passport, String employeeId, String ethnicity, int salary){
+        super(name, sname, gender, DateOfBirth, address, passport, employeeId, ethnicity, salary);
     }
     
     
@@ -37,4 +28,11 @@ public abstract class workAddress extends address{
         this.work_address = work_address;
     }
     
+    public void print(){
+        System.out.println("Information:");
+        super.print();
+        if(getWork_address() != null){
+            System.out.println("Work address: "+getWork_address());
+        }
+    }
 }
